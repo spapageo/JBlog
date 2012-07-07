@@ -1,0 +1,17 @@
+
+@import "libs/_mixins.less";
+@import "libs/_variables.less";
+ 
+.sidebar{
+	background-color: @gray;
+	height: 20*@baseLineHeight;
+	.border-radius(4px);
+	.box-shadow(~"0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)");
+	#font > #family > .sans-serif();
+	color: white;
+	
+	p{
+		.center-block();
+		width: 1.9*@gridColumnWidth + 1*@gridGutterWidth;
+	}
+};
