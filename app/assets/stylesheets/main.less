@@ -2,21 +2,52 @@
 @import "libs/_mixins.less";
 @import "libs/_variables.less";
  
+ @font-face {
+	font-family: BebasNeueRegular;
+	src: url('cool_font.ttf');
+}
+ 
+ 
  .main {
 	.center-block();
  }
  
+.navbar .container {
+	#grid > .core > .span(@gridColumns);
+}
+
+.navbar-inner {
+	.border-radius(0px);
+	ul {
+		#grid > .core > .span(@gridColumns);
+	}
+}
+
+.navbar .nav .end-bar {
+	float: right;
+}
+ 
 .sidebar {
 	background-color: @gray;
-	height: 20*@baseLineHeight;
 	.border-radius(4px);
 	.box-shadow(~"0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)");
-	#font > #family > .sans-serif();
+	#font > #family > .serif();
 	color: white;
-	
 	p{
 		.center-block();
 		width: 2.9*@gridColumnWidth + 2*@gridGutterWidth;
+	}
+	
+	h1{
+		color: @red;
+		#font > .monospace( 4*@baseFontSize, bold, 3*@baseLineHeight);
+		.center-block();
+		width: 2.9*@gridColumnWidth + 2*@gridGutterWidth;
+		margin-top: 20px;
+		margin-left: 8px;
+		margin-right: 0px;
+		padding: 0px;
+		
 	}
 }
 
