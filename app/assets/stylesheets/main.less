@@ -2,57 +2,53 @@
 @import "libs/_mixins.less";
 @import "libs/_variables.less";
  
- @font-face {
-	font-family: BebasNeueRegular;
-	src: url('cool_font.ttf');
-}
- 
- 
- .main {
-	.center-block();
- }
- 
-.navbar .container {
-	#grid > .core > .span(@gridColumns);
-}
-
-.navbar-inner {
-	.border-radius(0px);
-	ul {
+.navbar {
+	.container {
 		#grid > .core > .span(@gridColumns);
+	}
+	.brand {
+		float: right;
+		#font > #family > .serif();
+	}
+	.navbar-inner {
+		border-radius: 0px;
 	}
 }
 
-.navbar .nav .end-bar {
-	float: right;
-}
+
  
 .sidebar {
-	background-color: @gray;
-	.border-radius(4px);
+	background-color: @grayLight;
 	.box-shadow(~"0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)");
 	#font > #family > .serif();
 	color: white;
+	
 	p{
 		.center-block();
 		width: 2.9*@gridColumnWidth + 2*@gridGutterWidth;
 	}
 	
-	h1{
-		color: @red;
-		#font > .monospace( 4*@baseFontSize, bold, 3*@baseLineHeight);
-		.center-block();
-		width: 2.9*@gridColumnWidth + 2*@gridGutterWidth;
-		margin-top: 20px;
-		margin-left: 8px;
-		margin-right: 0px;
-		padding: 0px;
-		
+	.social {
+		margin-left: 20px;
+	}
+	
+	.divider {
+		height: 1px;
+		background-color: 0.8*@grayLight;
+  		border-bottom: 1px solid 1.2*@grayLight;
+		margin-top: 8px;
+		margin-bottom: 8px;
 	}
 }
 
+
+
+ .main {
+	.center-block();
+ }
+
 .main_content {
-	background-color: @gray;
+	background-color: @grayLight;
 	height: 20*@baseLineHeight;
 	.box-shadow(~"0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)");
 	#font > #family > .sans-serif();
