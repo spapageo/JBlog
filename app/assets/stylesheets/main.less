@@ -2,6 +2,8 @@
 @import "libs/_mixins.less";
 @import "libs/_variables.less";
  
+ 
+ 
 .navbar {
 	.container {
 		#grid > .core > .span(@gridColumns);
@@ -15,10 +17,16 @@
 	}
 }
 
+.main {
+	.center-block();
+}
 
+body{
+	background-color: @blue;
+}
  
 .sidebar {
-	background-color: @grayLight;
+	background-color: @gray;
 	.box-shadow(~"0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)");
 	#font > #family > .serif();
 	color: white;
@@ -33,28 +41,18 @@
 	}
 	
 	.divider {
-		height: 1px;
-		background-color: 0.8*@grayLight;
-  		border-bottom: 1px solid 1.2*@grayLight;
-		margin-top: 8px;
-		margin-bottom: 8px;
+		.seperator(@gray);
 	}
 }
 
-
-
- .main {
-	.center-block();
- }
-
-.main_content {
-	background-color: @grayLight;
+.post {
+	background-color: @gray;
 	height: 20*@baseLineHeight;
 	.box-shadow(~"0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)");
 	#font > #family > .sans-serif();
 	color: white;
-	
-	p{
-		.center-block();
+	margin-bottom: 18px;
+	.divider{
+		.seperator(@gray);
 	}
 }
