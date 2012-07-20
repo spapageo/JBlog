@@ -1,0 +1,69 @@
+
+@import "libs/_mixins.less";
+@import "libs/_variables.less";
+ 
+ 
+ 
+.navbar {
+	.container {
+		#grid > .core > .span(@gridColumns);
+	}
+	.brand {
+		float: right;
+		#font > #family > .serif();
+	}
+	.navbar-inner {
+		border-radius: 0px;
+	}
+}
+
+.main {
+	.center-block();
+}
+
+body{
+	background-image: url("../img/ocean_bg.png");
+}
+ 
+.sidebar {
+	background-color: #EFECCA;
+	color: #002F2F;
+	.box-shadow(~"0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)");
+	
+	p{
+		.center-block();
+		width: 2.9*@gridColumnWidth + 2*@gridGutterWidth;
+	}
+	
+	.social {
+		margin-left: 20px;
+	}
+	
+	.divider {
+		.seperator(#EFECCA);
+	}
+}
+
+.post {
+	background-color: #EFECCA;
+	color: #002F2F;
+	.box-shadow(~"0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)");
+	#font > #family > .sans-serif();
+	margin-bottom: 18px;
+	
+	.border-radius(6px);
+	
+	.divider{
+		.seperator(#EFECCA);
+	}
+	.title {
+		padding: 15px 15px 0px 15px;
+		margin: 0px;
+		#font > #family > .serif();
+	}
+	.date,.post_entry{
+		padding: 0px 15px 0px 15px;
+		margin: 0px;
+		text-rendering: optimizelegibility;
+	}
+}
