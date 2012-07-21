@@ -1,8 +1,9 @@
+@(page_title: String, content: String)
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>My Blog</title>
+	<title>@page_title</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -33,20 +34,7 @@
 	<div class="container main">
 		<div class="row">
 			<div class="span9 main_content">
-				<div class="post">
-					<h1 class="title"> Title </h1>
-					<div class="divider"></div>
-					<p class="date">2 April 2010</p>
-					<div class="divider"></div>
-					<div class="post_entry"
-						<p> Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a Testa asd a </p>
-					</div>
-					<div class="divider"></div>
-					<br />
-				</div>
-				<div class="post">
-					
-				</div>
+				@Html(content)
 			</div>
 			<div class="span3 sidebar">
 				<div class="divider"></div>
